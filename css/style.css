@@ -150,23 +150,24 @@ body {
     }
 }
 /* ==========================================
-   INVITED SPEAKERS SECTION
+   INTERACTIVE SPEAKER SECTION
    ========================================== */
 
 .speakers-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
+    gap: 40px 30px;
     margin-top: 45px;
-    align-items: stretch;
+    align-items: start;
 }
 
 /* Speaker card */
 
 .speaker-card {
+    position: relative;
     background: #ffffff;
-    border-radius: 8px;
-    padding: 28px 22px;
+    border-radius: 10px;
+    padding: 30px 20px;
     text-align: center;
 
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
@@ -175,11 +176,10 @@ body {
                 box-shadow 0.3s ease;
 }
 
-/* Hover effect */
-
 .speaker-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+    z-index: 10;
 }
 
 /* Speaker photographs */
@@ -187,72 +187,108 @@ body {
 .speaker-image {
     width: 170px;
     height: 170px;
-
     object-fit: cover;
     object-position: center;
-
     border-radius: 50%;
 
     display: block;
-    margin: 0 auto 22px;
+    margin: 0 auto 20px;
 
     border: 4px solid #f0f2f4;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
 }
 
-/* Speaker names */
+.speaker-image:hover {
+    transform: scale(1.05);
+}
+
+/* Speaker name */
 
 .speaker-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
     color: #222222;
-
     margin-bottom: 8px;
     line-height: 1.4;
 }
 
-/* Affiliations */
+/* University affiliation */
 
 .speaker-card .speaker-affiliation {
     font-size: 0.95rem;
     font-weight: 600;
     color: #287c8e;
-
     text-align: center;
-
-    margin-bottom: 20px;
+    margin-bottom: 0;
     line-height: 1.5;
 }
 
-/* Biographies */
+/* ==========================================
+   HIDDEN BIOGRAPHY
+   ========================================== */
 
 .speaker-card .speaker-bio {
-    font-size: 0.94rem;
-    font-weight: 400;
+    position: absolute;
 
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+
+    width: min(380px, 90vw);
+    max-height: 350px;
+    overflow-y: auto;
+
+    background: #ffffff;
+    padding: 22px;
+
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+
+    font-size: 0.92rem;
+    line-height: 1.7;
     color: #444444;
 
-    line-height: 1.75;
     text-align: justify;
 
-    margin-bottom: 0;
-    overflow-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.25s ease,
+                transform 0.25s ease,
+                visibility 0.25s ease;
+
+    z-index: 100;
+}
+
+/* Display biography when hovering */
+
+.speaker-card:hover .speaker-bio,
+.speaker-card:focus-within .speaker-bio {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(-50%) translateY(0);
 }
 
 /* ==========================================
-   TABLET RESPONSIVENESS
+   TABLET
    ========================================== */
 
 @media (max-width: 1000px) {
 
     .speakers-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px;
     }
 
 }
 
 /* ==========================================
-   MOBILE RESPONSIVENESS
+   MOBILE
    ========================================== */
 
 @media (max-width: 650px) {
@@ -271,12 +307,9 @@ body {
         height: 150px;
     }
 
-    .speaker-card h3 {
-        font-size: 1.2rem;
-    }
-
     .speaker-card .speaker-bio {
-        font-size: 0.93rem;
+        width: min(340px, 90vw);
+        max-height: 300px;
     }
 
 }
