@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Call for Contributions | SIW Workshop 2027</title>
+    <title>Call for Contributions | SIW RoboSoft 2027</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -17,91 +17,220 @@
 
         body {
             margin: 0;
-            background: #f5f7f9;
             font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222222;
         }
 
-        /* Page header */
+        /* ==========================================
+           BRISBANE BACKGROUND BANNER
+           ========================================== */
 
-        .cfp-header {
-            background: #193b47;
-            color: white;
+        .cfp-hero {
+            position: relative;
+
+            min-height: 420px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 25, 30, 0.45),
+                    rgba(0, 25, 30, 0.55)
+                ),
+                url("assets/images/brisbane.jpeg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
             text-align: center;
-            padding: 65px 20px;
+            padding: 60px 25px;
+            box-sizing: border-box;
         }
 
-        .cfp-header h1 {
-            font-size: 2.4rem;
-            margin-bottom: 15px;
-            color: white;
+        .cfp-hero h1 {
+            color: #ffffff;
+            font-size: clamp(2.3rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin: 0 0 25px;
         }
 
-        .cfp-header p {
-            font-size: 1.05rem;
+        .cfp-hero .workshop-title {
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 500;
             line-height: 1.7;
-            color: #e5eeee;
+            max-width: 900px;
+            margin: 0 auto 20px;
         }
 
-        /* Navigation */
-
-        .cfp-navigation {
-            background: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        .cfp-hero .conference-info {
+            color: #e8f2f1;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0;
         }
 
-        .cfp-navigation a {
-            color: #193b47;
+        /* ==========================================
+           NAVIGATION BAR
+           ========================================== */
+
+        .cfp-nav {
+            background: #ffffff;
+            padding: 20px 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 28px;
+
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .cfp-nav a {
+            color: #222222;
             text-decoration: none;
+            font-size: 0.95rem;
             font-weight: 600;
-            margin: 0 15px;
         }
 
-        .cfp-navigation a:hover {
+        .cfp-nav a:hover,
+        .cfp-nav a.active {
             color: #087f8c;
         }
 
-        /* Main content */
+        /* ==========================================
+           CONTENT SECTIONS
+           ========================================== */
 
-        .cfp-content {
+        .cfp-section {
+            padding: 65px 25px;
+            scroll-margin-top: 80px;
+        }
+
+        .cfp-section:nth-of-type(even) {
+            background: #f5f7f9;
+        }
+
+        .cfp-container {
             max-width: 1000px;
-            margin: 50px auto;
-            padding: 45px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            margin: 0 auto;
         }
 
-        .cfp-content h2 {
+        .cfp-section h2 {
             color: #193b47;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin: 0 0 30px;
+            text-align: left;
         }
 
-        .cfp-content p {
-            color: #444;
+        .cfp-section h3 {
+            color: #176b75;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .cfp-section p {
+            color: #444444;
             font-size: 1rem;
-            line-height: 1.8;
+            line-height: 1.85;
             text-align: justify;
+            margin-bottom: 20px;
         }
 
-        /* Mobile responsiveness */
+        .cfp-section ul {
+            padding-left: 25px;
+            line-height: 1.9;
+            color: #444444;
+        }
+
+        .cfp-section li {
+            margin-bottom: 10px;
+        }
+
+        /* ==========================================
+           IMPORTANT DATES
+           ========================================== */
+
+        .cfp-dates {
+            background: #EAF2ED;
+            border-left: 4px solid #287c8e;
+            border-radius: 6px;
+            padding: 25px 30px;
+        }
+
+        .cfp-dates p {
+            margin: 0 0 15px;
+            text-align: left;
+        }
+
+        .cfp-dates p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cfp-dates strong {
+            color: #193b47;
+        }
+
+        .cfp-date-value {
+            color: #087f8c;
+            font-weight: 600;
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+
+        .cfp-footer {
+            background: #193b47;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================
+           MOBILE RESPONSIVENESS
+           ========================================== */
 
         @media (max-width: 650px) {
 
-            .cfp-header h1 {
-                font-size: 1.8rem;
+            .cfp-hero {
+                min-height: 350px;
+                padding: 50px 20px;
             }
 
-            .cfp-navigation a {
-                display: inline-block;
-                margin: 8px;
+            .cfp-hero .workshop-title {
+                font-size: 1rem;
             }
 
-            .cfp-content {
-                margin: 25px 15px;
-                padding: 25px;
+            .cfp-nav {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .cfp-nav a {
+                font-size: 0.85rem;
+            }
+
+            .cfp-section {
+                padding: 45px 20px;
+            }
+
+            .cfp-section h2 {
+                font-size: 1.6rem;
             }
 
         }
@@ -112,28 +241,34 @@
 
 <body>
 
-    <!-- PAGE HEADER -->
+    <!-- ==========================================
+         BRISBANE HERO BANNER
+         ========================================== -->
 
-    <header class="cfp-header">
+    <header class="cfp-hero">
 
         <h1>Call for Contributions</h1>
 
-        <p>
+        <p class="workshop-title">
             Soft Intelligence in the Wild:
-            AI-Driven Design and Control for Agricultural Soft Robotics
+            AI-Driven Design and Control for
+            Agricultural Soft Robotics
         </p>
 
-        <p>
-            10th IEEE International Conference on Soft Robotics
-            (RoboSoft27)
+        <p class="conference-info">
+            RoboSoft 2027 &bull;
+            5–9 April 2027 &bull;
+            Brisbane, Australia
         </p>
 
     </header>
 
 
-    <!-- NAVIGATION -->
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
 
-    <nav class="cfp-navigation">
+    <nav class="cfp-nav">
 
         <a href="index.html">Home</a>
 
@@ -145,7 +280,7 @@
 
         <a href="index.html#schedule">Schedule</a>
 
-        <a href="call-for-contributions.html">
+        <a href="call-for-contributions.html" class="active">
             Call for Contributions
         </a>
 
@@ -156,19 +291,165 @@
     </nav>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- ==========================================
+         TYPES
+         ========================================== -->
 
-    <main class="cfp-content">
+    <section class="cfp-section" id="types">
 
-        <h2>Call for Contributions</h2>
+        <div class="cfp-container">
 
-        <p>
-            Submission information and guidelines
-            will be added here.
-        </p>
+            <h2>Types</h2>
 
-    </main>
+            <p>
+                Submission types and formatting requirements
+                will be added here.
+            </p>
 
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         TOPICS
+         ========================================== -->
+
+    <section class="cfp-section" id="topics">
+
+        <div class="cfp-container">
+
+            <h2>Topics</h2>
+
+            <p>
+                We welcome contributions related to
+                AI-driven design, intelligent perception,
+                tactile sensing, and adaptive control
+                for agricultural soft robotics.
+            </p>
+
+            <h3>Computational Design for Agriculture</h3>
+
+            <p>
+                Topics and descriptions will be added here.
+            </p>
+
+            <h3>
+                Intelligent Perception and Tactile Sensing
+                in Agricultural Deployment
+            </h3>
+
+            <p>
+                Topics and descriptions will be added here.
+            </p>
+
+            <h3>
+                Learning-Based Control for Real-World
+                Agricultural Deployment
+            </h3>
+
+            <p>
+                Topics and descriptions will be added here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SUBMISSION
+         ========================================== -->
+
+    <section class="cfp-section" id="submission">
+
+        <div class="cfp-container">
+
+            <h2>Submission</h2>
+
+            <p>
+                Submission instructions and the submission
+                link or email address will be added here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         IMPORTANT DATES
+         ========================================== -->
+
+    <section class="cfp-section" id="dates">
+
+        <div class="cfp-container">
+
+            <h2>Important Dates</h2>
+
+            <div class="cfp-dates">
+
+                <p>
+                    <strong>Submission Deadline:</strong>
+                    <span class="cfp-date-value">TBD</span>
+                </p>
+
+                <p>
+                    <strong>Notification of Acceptance:</strong>
+                    <span class="cfp-date-value">TBD</span>
+                </p>
+
+                <p>
+                    <strong>Workshop Day:</strong>
+                    <span class="cfp-date-value">TBD</span>
+                </p>
+
+                <p>
+                    <strong>Time:</strong>
+                    <span class="cfp-date-value">
+                        09:00 AM – 01:00 PM
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         NOTES
+         ========================================== -->
+
+    <section class="cfp-section" id="notes">
+
+        <div class="cfp-container">
+
+            <h2>Notes</h2>
+
+            <p>
+                Additional instructions for accepted
+                contributions and poster presentations
+                will be added here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+
+    <footer class="cfp-footer">
+
+        Soft Intelligence in the Wild |
+        RoboSoft 2027 |
+        Brisbane, Australia
+
+    </footer>
 
 </body>
 
