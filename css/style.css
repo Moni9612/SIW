@@ -149,3 +149,134 @@ body {
         padding: 50px 20px;
     }
 }
+/* ==========================================
+   INVITED SPEAKERS SECTION
+   ========================================== */
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 45px;
+    align-items: stretch;
+}
+
+/* Speaker card */
+
+.speaker-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 28px 22px;
+    text-align: center;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Speaker photographs */
+
+.speaker-image {
+    width: 170px;
+    height: 170px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+
+    display: block;
+    margin: 0 auto 22px;
+
+    border: 4px solid #f0f2f4;
+}
+
+/* Speaker names */
+
+.speaker-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222222;
+
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Affiliations */
+
+.speaker-card .speaker-affiliation {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #287c8e;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Biographies */
+
+.speaker-card .speaker-bio {
+    font-size: 0.94rem;
+    font-weight: 400;
+
+    color: #444444;
+
+    line-height: 1.75;
+    text-align: justify;
+
+    margin-bottom: 0;
+    overflow-wrap: break-word;
+}
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .speakers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    .speakers-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .speaker-card {
+        padding: 25px 20px;
+    }
+
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .speaker-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .speaker-card .speaker-bio {
+        font-size: 0.93rem;
+    }
+
+}
