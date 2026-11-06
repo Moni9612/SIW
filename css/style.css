@@ -758,3 +758,233 @@ body {
 #organisers {
     background-color: #FFFFFF !important;
 }
+
+/* ==========================================
+   VENUE SECTION
+   ========================================== */
+
+/* Full-width white background */
+
+.venue-section {
+    background-color: #ffffff !important;
+    padding: 75px 25px 90px;
+    scroll-margin-top: 80px;
+}
+
+/* Main container */
+
+.venue-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Venue heading */
+
+.venue-container > h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #193b47;
+    margin-bottom: 45px;
+}
+
+/* ==========================================
+   VENUE CARD
+   ========================================== */
+
+.venue-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    background: #f8f9f8;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    min-height: 500px;
+}
+
+/* ==========================================
+   LEFT SIDE - GOOGLE MAP
+   ========================================== */
+
+.venue-map {
+    width: 100%;
+    min-height: 500px;
+}
+
+.venue-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border: none;
+}
+
+/* ==========================================
+   RIGHT SIDE - VENUE INFORMATION
+   ========================================== */
+
+.venue-info {
+    padding: 55px 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+/* Location label */
+
+.venue-label {
+    color: #bd912b;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+/* Venue name */
+
+.venue-info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.25;
+
+    color: #111111;
+
+    margin: 0 0 20px;
+}
+
+/* Gold accent line */
+
+.venue-accent {
+    width: 50px;
+    height: 4px;
+
+    background: #c6a33e;
+
+    border-radius: 3px;
+
+    margin-bottom: 25px;
+}
+
+/* Address */
+
+.venue-address {
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.8;
+
+    color: #222222;
+
+    margin-bottom: 25px;
+}
+
+/* Divider */
+
+.venue-divider {
+    width: 120px;
+    height: 1px;
+
+    background: #dddddd;
+
+    margin-bottom: 25px;
+}
+
+/* Description */
+
+.venue-description {
+    font-size: 0.95rem;
+    line-height: 1.8;
+
+    color: #555555;
+
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   GOOGLE MAPS BUTTON
+   ========================================== */
+
+.venue-map-button {
+    display: inline-block;
+
+    background: #004d2b;
+    color: #f4c542 !important;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.venue-map-button:hover {
+    background: #087f8c;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 850px) {
+
+    .venue-card {
+        grid-template-columns: 1fr;
+    }
+
+    .venue-map {
+        min-height: 350px;
+    }
+
+    .venue-map iframe {
+        min-height: 350px;
+    }
+
+    .venue-info {
+        padding: 40px 30px;
+    }
+
+    .venue-info h3 {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .venue-section {
+        padding: 50px 15px;
+    }
+
+    .venue-container > h2 {
+        font-size: 1.7rem;
+    }
+
+    .venue-map,
+    .venue-map iframe {
+        min-height: 300px;
+    }
+
+    .venue-info {
+        padding: 30px 25px;
+    }
+
+}
