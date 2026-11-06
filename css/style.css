@@ -313,3 +313,233 @@ body {
     }
 
 }
+/* ==========================================
+   WORKSHOP SCHEDULE
+   ========================================== */
+
+/* Introduction */
+
+.schedule-intro {
+    text-align: center !important;
+    max-width: 850px;
+    margin: 0 auto 35px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Table container */
+
+.schedule-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Main table */
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* Table headings */
+
+.schedule-table thead {
+    background: #193b47;
+    color: #ffffff;
+}
+
+.schedule-table th {
+    padding: 18px 20px;
+    text-align: left;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    border-bottom: 2px solid #12313c;
+}
+
+/* Table columns */
+
+.schedule-table th:nth-child(1) {
+    width: 15%;
+}
+
+.schedule-table th:nth-child(2) {
+    width: 57%;
+}
+
+.schedule-table th:nth-child(3) {
+    width: 28%;
+}
+
+/* Table cells */
+
+.schedule-table td {
+    padding: 20px;
+
+    vertical-align: top;
+
+    border-bottom: 1px solid #e4e9ed;
+
+    line-height: 1.65;
+}
+
+/* Time column */
+
+.schedule-time {
+    font-weight: 700;
+    color: #193b47;
+    white-space: nowrap;
+}
+
+/* Session headings */
+
+.schedule-session-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #193b47;
+    margin-bottom: 15px;
+}
+
+/* Individual presentations */
+
+.schedule-talk {
+    padding-left: 15px;
+    margin-bottom: 15px;
+
+    border-left: 3px solid #2c8b92;
+}
+
+.schedule-talk:last-child {
+    margin-bottom: 0;
+}
+
+/* Presentation title */
+
+.talk-title {
+    display: block;
+
+    font-weight: 600;
+    color: #333333;
+
+    line-height: 1.55;
+}
+
+/* Speaker name */
+
+.talk-speaker {
+    display: block;
+
+    font-size: 0.9rem;
+    color: #287c8e;
+
+    margin-top: 5px;
+}
+
+/* Topic column */
+
+.schedule-topic {
+    color: #333333;
+}
+
+.schedule-topic strong {
+    display: block;
+    font-weight: 600;
+}
+
+/* Session number */
+
+.topic-label {
+    display: inline-block;
+
+    background: #e5f2f3;
+    color: #176b75;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+    margin-bottom: 10px;
+}
+
+/* Highlight rows */
+
+.schedule-highlight {
+    background: #f1f6f8;
+}
+
+/* Coffee break */
+
+.schedule-break {
+    background: #e9f4f1;
+}
+
+.schedule-break strong {
+    color: #176b65;
+}
+
+/* Additional descriptions */
+
+.schedule-extra {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-top: 5px;
+}
+
+/* Hover effect */
+
+.schedule-table tbody tr:hover {
+    background: #f4f9fa;
+    transition: background 0.2s ease;
+}
+
+/* Schedule note */
+
+.schedule-note {
+    font-size: 0.85rem;
+    color: #777777;
+
+    margin-top: 18px;
+    text-align: left !important;
+
+    font-style: italic;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .schedule-table {
+        min-width: 700px;
+        font-size: 0.9rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 15px;
+    }
+
+    .schedule-intro {
+        font-size: 0.95rem;
+    }
+
+    .schedule-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
