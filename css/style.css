@@ -543,3 +543,110 @@ body {
     }
 
 }
+/* ==========================================
+   ORGANISING COMMITTEE
+   ========================================== */
+
+/* Four organisers in one row */
+
+.organisers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 45px;
+    align-items: start;
+}
+
+/* Organiser cards */
+
+.organiser-card {
+    padding: 28px 15px;
+}
+
+/* Organiser photographs */
+
+.organiser-card .speaker-image {
+    width: 150px;
+    height: 150px;
+}
+
+/* Organiser names */
+
+.organiser-card h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+/* University affiliation */
+
+.organiser-card .speaker-affiliation {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Email link */
+
+.organiser-email {
+    display: inline-block;
+
+    color: #287c8e;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border: 1px solid #287c8e;
+    border-radius: 20px;
+
+    padding: 5px 20px;
+
+    transition: all 0.3s ease;
+}
+
+.organiser-email:hover {
+    background: #287c8e;
+    color: #ffffff;
+}
+
+/* Biography popup */
+
+.organiser-card .speaker-bio {
+    width: min(380px, 90vw);
+    max-height: 350px;
+}
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .organisers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    .organisers-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .organiser-card {
+        padding: 25px 20px;
+    }
+
+    .organiser-card .speaker-image {
+        width: 150px;
+        height: 150px;
+    }
+
+}
