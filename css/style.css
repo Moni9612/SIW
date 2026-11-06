@@ -586,30 +586,6 @@ body {
     text-align: center;
 }
 
-/* Email link */
-
-.organiser-email {
-    display: inline-block;
-
-    color: #287c8e;
-    font-size: 0.9rem;
-    font-weight: 600;
-
-    text-decoration: none;
-
-    border: 1px solid #287c8e;
-    border-radius: 20px;
-
-    padding: 5px 20px;
-
-    transition: all 0.3s ease;
-}
-
-.organiser-email:hover {
-    background: #287c8e;
-    color: #ffffff;
-}
-
 /* Biography popup */
 
 .organiser-card .speaker-bio {
