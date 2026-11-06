@@ -651,3 +651,87 @@ body {
     }
 
 }
+/* ==========================================
+   IMPORTANT DATES SECTION
+   ========================================== */
+
+/* Full-width background strip */
+
+.important-dates-strip {
+    width: 100%;
+    background: #EAF2ED;
+}
+
+/* Section spacing */
+
+.important-dates-section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+/* Section heading */
+
+.important-dates-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #193b47;
+    margin-bottom: 35px;
+}
+
+/* Dates content */
+
+.important-dates-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Individual date rows */
+
+.important-dates-content p {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+    text-align: left;
+    color: #333333;
+}
+
+/* Labels */
+
+.important-dates-content strong {
+    color: #193b47;
+    font-weight: 600;
+}
+
+/* Highlighted dates */
+
+.date-highlight {
+    color: #087F8C;
+    font-weight: 600;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 650px) {
+
+    .important-dates-section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .important-dates-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .important-dates-content p {
+        flex-wrap: wrap;
+        gap: 5px 10px;
+        font-size: 0.95rem;
+    }
+
+}
