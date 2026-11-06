@@ -735,3 +735,26 @@ body {
     }
 
 }
+
+/* ==========================================
+   IMPORTANT DATES & ORGANISERS BACKGROUNDS
+   ========================================== */
+
+/* Important Dates - Full-width sage green strip */
+
+.important-dates-strip {
+    background-color: #EAF2ED !important;
+    width: 100%;
+}
+
+/* Important Dates content */
+
+#important-dates {
+    background-color: transparent !important;
+}
+
+/* Organisers - White background */
+
+#organisers {
+    background-color: #FFFFFF !important;
+}
