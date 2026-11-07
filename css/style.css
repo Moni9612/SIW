@@ -549,7 +549,7 @@ body {
 
 /* Four organisers in one row */
 
-.organisers-grid {
+.organizers-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
@@ -559,7 +559,7 @@ body {
 
 /* Organiser cards */
 
-.organiser-card {
+.organizer-card {
     padding: 28px 15px;
 }
 
@@ -624,7 +624,7 @@ body {
 
 @media (max-width: 1100px) {
 
-    .organisers-grid {
+    .organizers-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -636,7 +636,7 @@ body {
 
 @media (max-width: 650px) {
 
-    .organisers-grid {
+    .organizers-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
@@ -753,9 +753,9 @@ body {
     background-color: transparent !important;
 }
 
-/* Organisers - White background */
+/* Organizers - White background */
 
-#organisers {
+#organizers {
     background-color: #FFFFFF !important;
 }
 
