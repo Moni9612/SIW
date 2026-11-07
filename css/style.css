@@ -565,14 +565,14 @@ body {
 
 /* Organiser photographs */
 
-.organiser-card .speaker-image {
+.organizer-card .speaker-image {
     width: 150px;
     height: 150px;
 }
 
 /* Organiser names */
 
-.organiser-card h3 {
+.organizer-card h3 {
     font-size: 1.15rem;
     line-height: 1.4;
     margin-bottom: 8px;
@@ -580,7 +580,7 @@ body {
 
 /* University affiliation */
 
-.organiser-card .speaker-affiliation {
+.organizer-card .speaker-affiliation {
     font-size: 0.9rem;
     margin-bottom: 12px;
     text-align: center;
@@ -588,7 +588,7 @@ body {
 
 /* Email link */
 
-.organiser-email {
+.organizer-email {
     display: inline-block;
 
     color: #287c8e;
@@ -605,7 +605,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.organiser-email:hover {
+.organizer-email:hover {
     background: #287c8e;
     color: #ffffff;
 }
@@ -613,7 +613,7 @@ body {
 
 /* Biography popup */
 
-.organiser-card .speaker-bio {
+.organizer-card .speaker-bio {
     width: min(380px, 90vw);
     max-height: 350px;
 }
@@ -641,11 +641,11 @@ body {
         gap: 25px;
     }
 
-    .organiser-card {
+    .organizer-card {
         padding: 25px 20px;
     }
 
-    .organiser-card .speaker-image {
+    .organizer-card .speaker-image {
         width: 150px;
         height: 150px;
     }
